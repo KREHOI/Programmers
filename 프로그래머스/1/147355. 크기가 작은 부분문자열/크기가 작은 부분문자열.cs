@@ -6,19 +6,16 @@ public class Solution {
     public int solution(string t, string p)
     {
         int answer = 0;
-        long diff2 = Convert.ToInt64(p);
-        int diff2Length = p.Length;
+        long target = Convert.ToInt64(p);
+        int targetLength = p.Length;
 
-        for (int i=0; i<t.Length; i++)
+        for (int idx = 0; idx < t.Length; idx++)
         {
-            if (i+diff2Length > t.Length)
+            if (idx + targetLength > t.Length)
                 break;
 
-            string s = t.Substring(i, diff2Length);
-
-            long diff1 = Convert.ToInt64(s);
-            
-            if (diff1 <= diff2)
+            string str = t.Substring(idx, targetLength);
+            if (Convert.ToInt64(str) <= target)
                 answer++;
         }
 
