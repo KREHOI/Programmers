@@ -5,10 +5,10 @@ public class Solution {
     public int solution(string s) {
         int answer = 0;
         
-        string x = "";
-        string f = "";
+        string x = string.Empty;
+        string f = string.Empty;
         
-        for (int i=0; i<s.Length; i++)
+        for (int i = 0; i < s.Length; i++)
         {
             if (string.IsNullOrEmpty(x))
             {
@@ -25,19 +25,14 @@ public class Solution {
             
             if (x.Length == f.Length)
             {
-                Console.WriteLine($"{x}{f}");
-                
                 answer += 1;
-                x = "";
-                f = "";
+                x = string.Empty;
+                f = string.Empty;
             }
         }
         
         if (!string.IsNullOrEmpty(x))
-        {
-            Console.WriteLine($"{x}");
             answer += 1;
-        }
         
         return answer;
     }
