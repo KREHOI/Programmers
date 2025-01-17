@@ -4,7 +4,7 @@ public class Solution {
     public int[] solution(string s) {
         int[] answer = new int[s.Length];
         
-        for (int idx=0; idx<s.Length; idx++)
+        for (int idx = 0; idx < s.Length; idx++)
         {
             char ch = s[idx];
             string targetStr = s.Substring(0, idx);
